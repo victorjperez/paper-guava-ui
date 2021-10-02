@@ -1,0 +1,30 @@
+import { Story, Meta} from '@storybook/addon-docs';
+
+import { Tile } from './Tile';
+
+<Meta title="Components/Tile" component={Tile} />
+
+# Checkbox
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+export const Template = (args) => <Tile {...args} />
+
+<Story 
+  name="positive"
+  args={{
+    status: 'Positive',
+    label: 'Positive'
+}}>
+  {Template.bind({})}
+</Story>
+
+<Story 
+  name="Negative"
+  args={{
+    status: 'positive',
+    label: 'Negative'
+}}>
+  {Template.bind({})}
+</Story>

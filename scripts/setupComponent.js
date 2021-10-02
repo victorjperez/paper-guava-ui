@@ -1,0 +1,3 @@
+
+const indexFile = `` 
+const componentFile = ``
