@@ -5,12 +5,13 @@ import { StyledButton } from './styles';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({  styleType = 'rectangle', size = 'medium', label, ...props }) => {
+export const Button = ({  styleType = 'rectangle', reversed, size = 'md', label, ...props }) => {
   return (
     <StyledButton
       type="button"
       styleType={styleType}
       size={size}
+      reversed={reversed}
       {...props}
     >
       {label}
@@ -21,6 +22,7 @@ export const Button = ({  styleType = 'rectangle', size = 'medium', label, ...pr
 Button.propTypes = {
   /**  What styling to use */
   styleType: PropTypes.oneOf(['rectangle', 'tile', 'inline']),
+  reversed: PropTypes.bool,
   /**  What accent color to use */
   color: PropTypes.string,
   /** What shape the button is */
