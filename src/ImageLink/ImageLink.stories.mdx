@@ -1,0 +1,23 @@
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+
+import { ImageLink } from './ImageLink';
+
+<Meta title="Components/Image Link" component={ImageLink} />
+
+# ImageLink
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+export const Template = (args) => <ImageLink {...args}><p>This Town</p></ImageLink>
+
+<Canvas>
+<Story 
+  name="Default Story"
+  args={{
+    imgSrc: "https://victorjperez.github.io/writing/assets/img/morgantown.jpg",
+  }}>
+  {Template.bind({})}
+</Story>
+</Canvas>
+
