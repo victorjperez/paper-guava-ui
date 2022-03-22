@@ -1,0 +1,44 @@
+.styledButton {
+  font-size: 24px;
+  width: 200px;
+  height: 65px;
+  list-style: none;
+  border: 2px solid var(--accent-color);
+  box-shadow: white 3px 3px, black 6px 6px;
+  transition: all 0.1s ease 0s;
+}
+
+/* styleType */
+.default {
+  background-color: white;
+  color: black;
+}
+.default:hover {
+  background-color: black;
+  color: white;
+}
+.inverted {
+  background-color: black;
+  color: white;
+}
+.inverted:hover {
+  background-color: white;
+  color: black;
+}
+
+/* size */
+.sm {
+  font-size: 14px;
+  width: 120px;
+  height: 40px;
+}
+.md {
+  font-size: 18px;
+  width: 160px;
+  height: 60px;
+}
+.lg {
+  font-size: 22px;
+  width: 200px;
+  height: 80px;
+}

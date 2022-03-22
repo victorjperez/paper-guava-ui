@@ -16,10 +16,20 @@ export const Template = (args) => <Button {...args} />
   name="Rectangle"
   args={{
     label: 'Rectangle',
-    styleType: 'rectangle',
     size: 'md'
 }}>
   {Template.bind({})}
 </Story>
 </Canvas>
 
+<Canvas>
+<Story 
+  name="Green"
+  args={{
+    accentColor: 'lime',
+    label: 'Rectangle',
+    size: 'md'
+}}>
+  {Template.bind({})}
+</Story>
+</Canvas>

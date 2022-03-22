@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledImageLink } from "./styles"; 
+// import { StyledImageLink } from "./styles"; 
 /**
  * Primary UI component for user interaction
  */
 export const ImageLink = ({ imgSrc, brightness = "30%", position="center", children, ...props }) => {
   return (
-    <StyledImageLink brightness={brightness} position={position} {...props}>
+    <div brightness={brightness} position={position} {...props}>
       <span className="overlay-item">{children}</span>
       <img src={imgSrc} />
-    </StyledImageLink>
+    </div>
   );
 };
 
