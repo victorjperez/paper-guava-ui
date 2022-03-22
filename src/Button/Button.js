@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import styles from "./Button.module.css"; 
 /**
@@ -16,14 +17,10 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={
-        [styles.styledButton, styles[size], styles[styleType]].join(" ")
-      }     
-      style={
-        {
-          '--accent-color': accentColor,
-        }
-      }
+      className={classNames(styles.styledButton, styles[size], styles[styleType])}
+      style={{
+        "--accent-color": accentColor,
+      }}
       onClick={onClick}
       {...props}
     >

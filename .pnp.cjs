@@ -49,6 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:12.1.1"],
             ["babel-loader", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:8.2.2"],
             ["babel-plugin-styled-components", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:1.13.2"],
+            ["classnames", "npm:2.3.1"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-airbnb", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:18.2.1"],
             ["eslint-plugin-import", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:2.24.2"],
@@ -9543,6 +9544,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["classnames", [
+        ["npm:2.3.1", {
+          "packageLocation": "./.yarn/cache/classnames-npm-2.3.1-f2ae0a8d3c-14db8889d5.zip/node_modules/classnames/",
+          "packageDependencies": [
+            ["classnames", "npm:2.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["clean-css", [
         ["npm:4.2.3", {
           "packageLocation": "./.yarn/cache/clean-css-npm-4.2.3-976d15760b-613129973a.zip/node_modules/clean-css/",
@@ -17138,6 +17148,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:12.1.1"],
             ["babel-loader", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:8.2.2"],
             ["babel-plugin-styled-components", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:1.13.2"],
+            ["classnames", "npm:2.3.1"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-airbnb", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:18.2.1"],
             ["eslint-plugin-import", "virtual:2069ae1275857c8fa7ae063095996b7b9ecd98aa7653b1a3b720a9fdf3bbad28f41a51110a01a3d653f0300010898f13296da1f6bfa08a330f06410f5e4c62c3#npm:2.24.2"],
