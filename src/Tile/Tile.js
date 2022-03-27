@@ -23,8 +23,8 @@ export const Tile = ({
         href={link}
         {...props}
       >
-        {/* {tileIcon && tileIcon}
-        {label && label} */}
+        {tileIcon && tileIcon}
+        {label && label}
       </a>
     );
   }
@@ -38,8 +38,8 @@ export const Tile = ({
       onClick={onClick}
       {...props}
     >
-      {/* {tileIcon && tileIcon}
-      {label && label} */}
+      {tileIcon && tileIcon}
+      {label && label}
     </button>
   );
 };
