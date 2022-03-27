@@ -10,7 +10,7 @@
   border: 2px solid black;
   transition: .1s all;
 }
-.styledTile:hover {
+.styledTile:hover, .styledTile:focus {
   cursor: pointer;
   color: white;
   background-color: black;
