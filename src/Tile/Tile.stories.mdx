@@ -1,0 +1,36 @@
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+
+import { Tile } from './Tile';
+
+<Meta title="Components/Tile" component={Tile} />
+
+# Tile
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+export const Template = (args) => <Tile {...args} />
+
+
+<Canvas>
+<Story 
+  name="Main Story"
+  args={{
+    label: 'Tile',
+    tileIcon: <span style={{ padding: '8px 0', fontSize: '2em' }}>🤨</span>,
+}}>
+  {Template.bind({})}
+</Story>
+</Canvas>
+
+<Canvas>
+<Story 
+  name="Accented"
+  args={{
+    label: 'Tile',
+    styleType: 'accented',
+    tileIcon: <span style={{ padding: '8px 0', fontSize: '2em' }}>🤨</span>,
+}}>
+  {Template.bind({})}
+</Story>
+</Canvas>

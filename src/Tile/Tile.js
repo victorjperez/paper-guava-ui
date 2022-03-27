@@ -2,39 +2,43 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import styles from "./Button.module.css"; 
+import styles from "./Tile.module.css"; 
 
-export const Button = ({
+export const Tile = ({
   accentColor = 'red',
   label,
   onClick = () => {},
   styleType = "default",
+  tileIcon,
   ...props
 }) => {
   return (
     <button
       type="button"
-      className={classNames(styles.styledButton, styles[styleType])}
+      className={classNames(styles.styledTile, styles[styleType])}
       style={{
         "--accent-color": accentColor,
       }}
       onClick={onClick}
       {...props}
     >
+      {tileIcon && tileIcon}
       {label}
     </button>
   );
 };
 
-Button.propTypes = {
-  /**  What accent color to use */
+Tile.propTypes = {
+  /** Which accent color to use */
   accentColor: PropTypes.string,
-  /** Button label */
+  /** Tile label */
   label: PropTypes.string.isRequired,
   /** on click callback */
   onClick: PropTypes.func,
-  /**  What styling to use */
-  styleType: PropTypes.oneOf(["default", "inverted"]),
+  /** Which tyling set to use */
+  styleType: PropTypes.oneOf(["default", "accented"]),
+  /** Icon passed to Tile above label */
+  tileIcon: PropTypes.node,
 };
 
 
