@@ -7,6 +7,7 @@ export const fontUrl = 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,
 export const bodyStyles = css`
   * {
     font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing: content-box;
   }
   a,
   a:hover,
