@@ -7,14 +7,30 @@ import styles from "./Tile.module.css";
 export const Tile = ({
   accentColor = 'red',
   label,
+  link,
   onClick = () => {},
   styleType = "default",
   tileIcon,
   ...props
 }) => {
+  if (link) {
+    return (
+      <a
+        className={classNames(styles.styledTile, styles[styleType])}
+        style={{
+          "--accent-color": accentColor,
+        }}
+        href={link}
+        {...props}
+      >
+        {/* {tileIcon && tileIcon}
+        {label && label} */}
+      </a>
+    );
+  }
   return (
     <button
-      type="button"
+    type="button"
       className={classNames(styles.styledTile, styles[styleType])}
       style={{
         "--accent-color": accentColor,
@@ -22,8 +38,8 @@ export const Tile = ({
       onClick={onClick}
       {...props}
     >
-      {tileIcon && tileIcon}
-      {label}
+      {/* {tileIcon && tileIcon}
+      {label && label} */}
     </button>
   );
 };
@@ -32,7 +48,9 @@ Tile.propTypes = {
   /** Which accent color to use */
   accentColor: PropTypes.string,
   /** Tile label */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  /** URL */
+  link: PropTypes.string,
   /** on click callback */
   onClick: PropTypes.func,
   /** Which tyling set to use */

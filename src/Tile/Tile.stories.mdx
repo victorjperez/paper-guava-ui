@@ -1,4 +1,4 @@
-import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import { Story, Meta, Canvas, ArgsTable } from '@storybook/addon-docs';
 
 import { Tile } from './Tile';
 
@@ -6,8 +6,7 @@ import { Tile } from './Tile';
 
 # Tile
 
-With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.
+`Tile` is a button component that renders a label with an icon above it. If provided with a `link` it acts as an anchor instead of a button.
 
 export const Template = (args) => <Tile {...args} />
 
@@ -34,3 +33,5 @@ export const Template = (args) => <Tile {...args} />
   {Template.bind({})}
 </Story>
 </Canvas>
+
+<ArgsTable of={Tile} />

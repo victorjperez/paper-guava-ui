@@ -13,7 +13,6 @@ export const Button = ({
 }) => {
   return (
     <button
-      type="button"
       className={classNames(styles.styledButton, styles[styleType])}
       style={{
         "--accent-color": accentColor,
