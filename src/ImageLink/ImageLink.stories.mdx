@@ -1,4 +1,4 @@
-import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import { Story, Meta, Canvas, ArgsTable } from '@storybook/addon-docs';
 
 import { ImageLink } from './ImageLink';
 
@@ -22,8 +22,7 @@ import { ImageLink } from './ImageLink';
 
 # ImageLink
 
-With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.
+`ImageLink` is an anchor component used to display child elements overtop an image.
 
 export const Template = (args) => <ImageLink {...args} />
 
@@ -39,3 +38,15 @@ export const Template = (args) => <ImageLink {...args} />
 </Story>
 </Canvas>
 
+## Component Options
+
+Below is a list of props for `ImageLink` and their usage.
+
+### Image Brightness
+
+You can set the Brightness of the image by passing a `brightness` value.
+
+```jsx
+<ImageLink brightness="90%" />
+```
+<ArgsTable of={ImageLink} />

@@ -25,10 +25,10 @@ export const ImageLink = ({
 };
 
 ImageLink.propTypes = {
-  /** Image src used as the base */
-  imgSrc: PropTypes.string,
   /** Sets the brightness filter of the image */
   brightness: PropTypes.string,
+  /** Image src used as the base */
+  imgSrc: PropTypes.string,
   /** Positioning of the child component */
   position: PropTypes.oneOf(["center"]),
   // Will support these eventually when needed, no need to overcomplicate:
