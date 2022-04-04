@@ -1,12 +1,9 @@
 
 import { createGlobalStyle, css } from 'styled-components';
 
-
-export const fontUrl = 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,800,900';
-
 export const bodyStyles = css`
   * {
-    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Goudy Bookletter 1911", serif;
     box-sizing: content-box;
   }
   a,
