@@ -1,1 +1,1 @@
-export { ImageLink as default } from "./ImageLink";
+export { ImageLink  } from "./ImageLink";

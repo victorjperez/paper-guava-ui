@@ -1,28 +1,23 @@
 .styledButton {
+  background-color: white;
+  color: black;
   cursor: pointer;
   padding: 8px 24px;
   font-size: 16px;
   font-weight: 400;
-  list-style: none;
-  border: 2px solid var(--accent-color);
-  box-shadow: white 3px 3px, black 6px 6px;
+  border: 1px solid black;  
   transition: all 0.1s ease 0s;
 }
-
-/* styleType */
-.default {
-  background-color: white;
-  color: black;
-}
-.default:hover {
+.styledButton:hover, .styledButton:focus {
+  cursor: pointer;
   background-color: black;
   color: white;
+  box-shadow: 3px 3px var(--accent-color),6px 6px black, inset 0px 0px 0px 1px white;
 }
-.inverted {
-  background-color: black;
-  color: white;
-}
-.inverted:hover {
-  background-color: white;
-  color: black;
+/* styleTypes */
+.tile {
+  font-size: 22px;
+  width: 140px;
+  height: 140px;
+  padding: 8px;
 }

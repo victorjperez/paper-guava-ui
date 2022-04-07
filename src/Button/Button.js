@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import styles from "./Button.module.css"; 
 
-export const Button = ({
-  accentColor = 'red',
+export const Button =forwardRef(({ 
+  accentColor = 'gray',
   label,
   onClick = () => {},
   styleType = "default",
-  ...props
-}) => {
+  ...props }, ref) => {
   return (
     <button
       className={classNames(styles.styledButton, styles[styleType])}
@@ -18,22 +17,23 @@ export const Button = ({
         "--accent-color": accentColor,
       }}
       onClick={onClick}
+      ref={ref}
       {...props}
     >
       {label}
     </button>
   );
-};
+});
 
 Button.propTypes = {
-  /**  What accent color to use */
+  /** olor used as accent */
   accentColor: PropTypes.string,
   /** Button label */
   label: PropTypes.string.isRequired,
-  /** on click callback */
+  /** onClick callback */
   onClick: PropTypes.func,
-  /**  What styling to use */
-  styleType: PropTypes.oneOf(["default", "inverted"]),
+  /** Which pre-determined style to use */
+  styleType: PropTypes.oneOf(["default", "tile"]),
 };
 
 

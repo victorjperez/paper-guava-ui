@@ -1,0 +1,81 @@
+import { Story, Meta, Canvas, ArgsTable } from '@storybook/addon-docs';
+import { StorybookDocsFooter } from '../StorybookDocsFooter';
+
+import { Button } from './Button';
+
+# Button
+
+`Button` is a button element with built in accessibility considerations
+<Canvas>
+    <Story id="core-ui-button--main-story"/>
+</Canvas>
+
+
+```jsx
+import React from 'react'
+import { Button } from '@pguava-ui'
+
+<Button label="Button" />
+```
+
+## Component Options
+
+<ArgsTable of={Button} />
+
+Below is a more detailed list of props for `Button` and their usage.
+
+### Accent Color
+
+The color used as an accent shadow of the button. This accent appears on hover and focus. 
+
+<Canvas>
+    <Story id="core-ui-button--green-accent-color"/>
+</Canvas>
+
+```jsx
+<Button accentColor="forestgreen" />
+```
+
+### Label
+
+Every Button is required to have a label for accessibilty reasons. If this does not meet your needs, see the [Accessibility](#accessibility) section below.
+
+```jsx
+<Button label="Button Label" />
+```
+
+### Callback: onClick
+
+An `onClick` callback can be provided that triggers when a user clicks the `Button`.
+<Canvas>
+    <Story id="core-ui-button--on-click-callback"/>
+</Canvas>
+
+```jsx
+const handleClick = () => alert('Button clicked!');
+
+<Button onClick={handleClick} />
+```
+
+### StyleType
+
+There are currently two styles for the `Button`:
+- `default` - basic rectangle button
+- `tile` - large square button, intended for larger UI
+
+<Canvas>
+    <Story id="core-ui-button--tile-style-type"/>
+</Canvas>
+
+```jsx
+<Button styleType="tile" />
+```
+## Accessibility
+
+Below are the built in accessibility notes and considerations for `Button`.
+
+### Do not override focus outline
+
+The default focus outline provided by the browser is needed so keyboard users know what element is focused on the page. While there are additional focus styles that may be supressed, it is critical that the default outline is not.
+
+<StorybookDocsFooter />

@@ -1,0 +1,29 @@
+.styledStorybookDocsFooter {
+    margin: 64px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 48px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+.footer-row {
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-size: 16px;
+    border-bottom: 1px solid black;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+a {
+    font-style: italic;
+}
+a:hover, a:focus{
+    text-shadow: 1px 1px 0 #8254eb, 2px 2px 0 white, 3px 3px 0 black;
+    transition: 0.1s;
+}

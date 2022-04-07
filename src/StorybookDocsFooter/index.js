@@ -1,0 +1,1 @@
+export { StorybookDocsFooter  } from "./StorybookDocsFooter";
