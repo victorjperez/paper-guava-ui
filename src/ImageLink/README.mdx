@@ -43,4 +43,20 @@ The base of `ImageLink` is an `img` element, and needs a src passed via `imgSrc`
 <ImageLink imgSrc="https://victorjperez.github.io/writing/assets/img/morgantown.jpg" />
 ```
 
+## Accessibility
+
+Below are the built in accessibility notes and considerations for `Button`.
+
+## Only use decorative images
+
+Any `imgSrc` provided should be pruely decorative, and should not be critical to the usage of the component.
+
+## Ensure text color contrast when using brightness
+
+Depending on the passed children, your brightness value may not let text have enough color contrast to meet accessibility standards. Be sure to check this with every child component possible for `ImageLink`.
+
+## Provide aria label if child does not contain text
+
+If you are not passing text to `ImageLink`, an `aria-label` should be provided to describe the link.
+
 <StorybookDocsFooter />

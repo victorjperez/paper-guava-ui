@@ -16,6 +16,8 @@ export const ImageLink = forwardRef(({
         style={{
           "--brightness": brightness,
         }}
+        alt=""
+        role="presentation"
       />
       <span className={styles.overlayItem}>{children}</span>
     </a>
