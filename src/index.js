@@ -1,3 +1,5 @@
 export { Button } from './Button'
-export { Tile } from "./Tile";
+export { ImageLink } from "./ImageLink";
+
+export { StorybookDocsFooter } from "./StorybookDocsFooter";
 
