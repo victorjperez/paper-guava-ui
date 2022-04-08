@@ -26,7 +26,7 @@ export const Button =forwardRef(({
 });
 
 Button.propTypes = {
-  /** olor used as accent */
+  /** Color used as accent */
   accentColor: PropTypes.string,
   /** Button label */
   label: PropTypes.string.isRequired,
