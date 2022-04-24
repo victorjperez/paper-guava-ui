@@ -9,7 +9,7 @@ if (!process.argv[2] || !/^[a-zA-Z]+$/.test(process.argv[2])) {
 }
 const componentName = process.argv[2];
 const componentPath = `./src/${componentName}`;
-const scriptFilesPath = "./scripts/CreateComponentFiles/";
+const scriptFilesPath = "./scripts/CreateComponentFiles";
 
 if (fs.existsSync(componentPath)) {
   console.log("\x1b[31mERROR: Component already exists! Exiting...\x1b[0m");
@@ -29,27 +29,22 @@ const fileNames = [
   ["README.txt", "README.mdx"],
 ];
 
-
+let readData;
+let result;
 fileNames.forEach(fileName => {
-    fs.readFile(
-      `${scriptFilesPath}/${fileName[0]}`,
-      "utf8",
-      function (err, data) {
-        if (err) {
-          return console.log(err);
-        }
-        var result = data.replace(/{% Component %}/g, componentName);
+    try {
+        readData = fs.readFileSync(`${scriptFilesPath}/${fileName[0]}`);
+    } catch (error) {
+        throw error;
+    }
+    let result = readData.toString().replace(/{% Component %}/g, componentName);
 
-        fs.writeFile(
-          `${componentPath}/${fileName[1]}`,
-          result,
-          "utf8",
-          function (err) {
-            if (err) return console.log(err);
-          }
-        );
-      }
-    );
+    try {
+        fs.writeFileSync(`${componentPath}/${fileName[1]}`, result);
+    } catch (error) {
+        throw error;
+    }
+
 });
 console.log(
   `\x1b[32mSuccess!\x1b[0m Your new component folder is located at \x1b[36m${componentPath}\x1b[0m.`
