@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from "./ImageLink.module.css"; 
+import styles from "./ImageLink.module.scss"; 
 
 export const ImageLink = forwardRef(({ 
   brightness = "30%",

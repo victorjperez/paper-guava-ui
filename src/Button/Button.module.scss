@@ -7,13 +7,14 @@
   font-weight: 400;
   border: 1px solid black;  
   transition: all 0.1s ease 0s;
+  &:hover, &:focus {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 3px var(--accent-color),6px 6px black, inset 0px 0px 0px 1px white;
+  }
 }
-.styledButton:hover, .styledButton:focus {
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  box-shadow: 3px 3px var(--accent-color),6px 6px black, inset 0px 0px 0px 1px white;
-}
+
 /* styleTypes */
 .tile {
   font-size: 22px;

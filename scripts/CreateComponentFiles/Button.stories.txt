@@ -1,0 +1,21 @@
+import React from 'react';
+
+import README from './README.mdx';
+
+import { {% Component %} } from './{% Component %}';
+
+export default {
+  title: "Core UI/{% Component %}",
+  component: {% Component %},
+  parameters: {
+    docs: {
+      page: README,
+    },
+  },
+};
+const Template = (args) => <{% Component %} {...args} />;
+
+export const MainStory = Template.bind({});
+MainStory.args ={
+  prop: true
+}

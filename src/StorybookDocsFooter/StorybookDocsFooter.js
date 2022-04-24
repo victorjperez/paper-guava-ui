@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from "./StorybookDocsFooter.module.css"; 
+import styles from "./StorybookDocsFooter.module.scss"; 
 
 export const StorybookDocsFooter = forwardRef(({ ...props }, ref) => {
   return (

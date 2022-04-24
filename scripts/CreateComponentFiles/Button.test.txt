@@ -1,0 +1,11 @@
+import React from 'react'
+import {render, fireEvent, screen} from '@testing-library/react'
+
+import { {% Component %} } from './{% Component %}'
+
+describe("{% Component %}", () => {
+  test("smoke ", () => {
+    render(<{% Component %} data-testid="test-{% Component %}" />);
+    expect(screen.getByTestId("test-{% Component %}")).toBeInTheDocument();
+  });
+});
