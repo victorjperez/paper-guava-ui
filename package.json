@@ -6,6 +6,7 @@
   "packageManager": "yarn@3.0.2",
   "sideEffects": false,
   "scripts": {
+    "create:component": "node ./scripts/createComponent.js",
     "start": "yarn storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs-build",

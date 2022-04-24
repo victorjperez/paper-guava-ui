@@ -1,3 +1,0 @@
-
-const indexFile = `` 
-const componentFile = ``
