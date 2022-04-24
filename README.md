@@ -9,7 +9,7 @@ Because of this, there are various design tradoffs you may encounter. Most of th
 This is very much an early version and many things are a work in progress.
 
 ## Key features in progress
-- Component template creation script
+- ~Component template creation script~
 - npm publishing
 
 ## Work in progress components
