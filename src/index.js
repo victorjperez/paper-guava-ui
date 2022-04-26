@@ -1,5 +1,4 @@
-export { Button } from './Button'
-export { ImageLink } from "./ImageLink";
+export { Button } from './Button';
+export { ImageLink } from './ImageLink';
 
-export { StorybookDocsFooter } from "./StorybookDocsFooter";
-
+export { StorybookDocsFooter } from './StorybookDocsFooter';

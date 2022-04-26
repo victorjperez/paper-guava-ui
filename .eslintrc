@@ -1,0 +1,24 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "plugin:jsx-a11y/recommended", "eslint:recommended", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "complexity": ["warn", { "max": 7 }],
+    "react/display-name": "off"
+  },
+  "globals": {
+    "React": "writable"
+  },
+  "overrides": [{ "files": ["*.test.js"], "rules": { "no-unused-expressions": "off" } }]
+}

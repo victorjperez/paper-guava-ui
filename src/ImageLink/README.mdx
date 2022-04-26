@@ -7,19 +7,19 @@ import { ImageLink } from './ImageLink';
 
 `ImageLink` is an anchor component used to display child elements overtop an image.
 
-export const Template = (args) => <ImageLink {...args} />
+export const Template = (args) => <ImageLink {...args} />;
 
 <Canvas>
-    <Story id="core-ui-image-link--main-story"/>
+  <Story id="core-ui-image-link--main-story" />
 </Canvas>
 
 ```jsx
-import React from 'react'
-import { ImageLink } from '@pguava-ui'
+import React from 'react';
+import { ImageLink } from '@pguava-ui';
 
 <ImageLink href="/writing" imgSrc="https://victorjperez.github.io/writing/assets/img/morgantown.jpg">
   <p>This Town</p>
-</ImageLink>
+</ImageLink>;
 ```
 
 ## Component Options
@@ -39,6 +39,7 @@ You can set the Brightness of the image by filter by passing a `brightness` valu
 ### Image Source
 
 The base of `ImageLink` is an `img` element, and needs a src passed via `imgSrc`. If no source is passed, it will fall back to light gray.
+
 ```jsx
 <ImageLink imgSrc="https://victorjperez.github.io/writing/assets/img/morgantown.jpg" />
 ```

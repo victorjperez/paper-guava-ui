@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import README from "./README.mdx";
+import README from './README.mdx';
 
-import { ImageLink } from "./ImageLink";
+import { ImageLink } from './ImageLink';
 
 export default {
-  title: "Core UI/Image Link",
+  title: 'Core UI/Image Link',
   component: ImageLink,
   parameters: {
     docs: {
@@ -16,14 +16,13 @@ export default {
 const Template = (args) => (
   <div
     style={{
-      width: "400px",
-      height: "300px",
-      textShadow: "2px 2px 0 black",
-      color: "white",
-      fontSize: "48px",
-      textAlign: "center",
-    }}
-  >
+      width: '400px',
+      height: '300px',
+      textShadow: '2px 2px 0 black',
+      color: 'white',
+      fontSize: '48px',
+      textAlign: 'center',
+    }}>
     <ImageLink {...args} />
   </div>
 );
@@ -34,4 +33,3 @@ MainStory.args = {
   imgSrc: 'https://victorjperez.github.io/writing/assets/img/morgantown.jpg',
   children: <p>This Town</p>,
 };
-

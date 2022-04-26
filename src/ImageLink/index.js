@@ -1,1 +1,1 @@
-export { ImageLink  } from "./ImageLink";
+export { ImageLink } from './ImageLink';

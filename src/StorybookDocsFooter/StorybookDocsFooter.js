@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 
-import styles from "./StorybookDocsFooter.module.scss"; 
+import styles from './StorybookDocsFooter.module.scss';
 
 export const StorybookDocsFooter = forwardRef(({ ...props }, ref) => {
   return (
@@ -10,14 +9,10 @@ export const StorybookDocsFooter = forwardRef(({ ...props }, ref) => {
         <h2>Paper Guava UI Links</h2>
         <ul>
           <li>
-            <a href="https://github.com/victorjperez/paper-guava-ui">
-              Github Repo
-            </a>
+            <a href="https://github.com/victorjperez/paper-guava-ui">Github Repo</a>
           </li>
           <li>
-            <a href="https://victorjperez.github.io/paper-guava-ui/?path=/story/documentation-introduction--page">
-              Prod Storybook
-            </a>
+            <a href="https://victorjperez.github.io/paper-guava-ui/?path=/story/documentation-introduction--page">Prod Storybook</a>
           </li>
         </ul>
       </div>
@@ -25,9 +20,7 @@ export const StorybookDocsFooter = forwardRef(({ ...props }, ref) => {
         <h2>Key Documentation</h2>
         <ul>
           <li>
-            <a href="./?path=/docs/documentation-introduction--page">
-              Introduction
-            </a>
+            <a href="./?path=/docs/documentation-introduction--page">Introduction</a>
           </li>
         </ul>
       </div>
@@ -64,5 +57,3 @@ StorybookDocsFooter.propTypes = {
   /** Prop info here */
   // prop: PropTypes.any,
 };
-
-

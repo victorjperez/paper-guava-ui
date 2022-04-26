@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import README from "./README.mdx";
+import README from './README.mdx';
 
-import { StorybookDocsFooter } from "./StorybookDocsFooter";
+import { StorybookDocsFooter } from './StorybookDocsFooter';
 
 export default {
-  title: "Docs Utilities/StorybookDocsFooter",
+  title: 'Docs Utilities/StorybookDocsFooter',
   component: StorybookDocsFooter,
   parameters: {
     docs: {

@@ -5,7 +5,7 @@ import README from './README.mdx';
 import { Button } from './Button';
 
 export default {
-  title: "Core UI/Button",
+  title: 'Core UI/Button',
   component: Button,
   parameters: {
     docs: {
@@ -16,26 +16,27 @@ export default {
 const Template = (args) => <Button {...args} />;
 
 export const MainStory = Template.bind({});
-MainStory.args ={
-  label: 'Button'
-}
+MainStory.args = {
+  label: 'Button',
+  href: 'http://google.com',
+};
 
 export const GreenAccentColor = Template.bind({});
 GreenAccentColor.args = {
-  accentColor: "forestgreen",
-  label: "Green Button",
+  accentColor: 'forestgreen',
+  label: 'Green Button',
 };
 
 const handleClick = () => alert('Button clicked!');
 
-export const onClickCallback = Template.bind({});
-onClickCallback.args = {
+export const OnClickCallback = Template.bind({});
+OnClickCallback.args = {
   onClick: handleClick,
-  label: "Click Me",
+  label: 'Click Me',
 };
 
 export const TileStyleType = Template.bind({});
 TileStyleType.args = {
-  label: "Tile Button",
-  styleType: "tile",
+  label: 'Tile Button',
+  styleType: 'tile',
 };

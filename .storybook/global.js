@@ -1,9 +1,8 @@
-
 import { createGlobalStyle, css } from 'styled-components';
 
 export const bodyStyles = css`
   * {
-    font-family: "Goudy Bookletter 1911", serif;
+    font-family: 'Goudy Bookletter 1911', serif;
     box-sizing: content-box;
   }
   a,

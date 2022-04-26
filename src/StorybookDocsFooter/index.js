@@ -1,1 +1,1 @@
-export { StorybookDocsFooter  } from "./StorybookDocsFooter";
+export { StorybookDocsFooter } from './StorybookDocsFooter';

@@ -1,8 +1,8 @@
-import React from 'react'
-import { GlobalStyle } from './global'
+import React from 'react';
+import { GlobalStyle } from './global';
 // Global decorator to apply the styles to all stories
 export const decorators = [
-  Story => (
+  (Story) => (
     <>
       <GlobalStyle />
       <Story />
@@ -11,7 +11,7 @@ export const decorators = [
 ];
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -20,7 +20,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ["Introduction","Documentation", "Core UI", "Docs Utilities"],
+      order: ['Introduction', 'Documentation', 'Core UI', 'Docs Utilities'],
     },
   },
 };

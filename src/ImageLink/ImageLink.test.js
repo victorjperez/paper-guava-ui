@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import {render, fireEvent, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react';
 
-import { ImageLink } from "./ImageLink";
+import { ImageLink } from './ImageLink';
 
-describe("ImageLink", () => {
-  test("smoke ", () => {
+describe('ImageLink', () => {
+  test('smoke ', () => {
     render(<ImageLink label="test label" data-testid="test-button" />);
-    expect(screen.getByTestId("test-button")).toBeInTheDocument();
+    expect(screen.getByTestId('test-button')).toBeInTheDocument();
   });
 });
