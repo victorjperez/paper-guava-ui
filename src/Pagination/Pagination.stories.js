@@ -19,4 +19,6 @@ export const MainStory = (args) => {
 };
 MainStory.args = {
   pageCount: 10,
+  maxVisible: 5,
+  currentPage: 1,
 };

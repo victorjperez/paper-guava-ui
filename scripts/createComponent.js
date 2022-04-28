@@ -33,7 +33,6 @@ fileNames.forEach((fileName) => {
   let result = readData.toString().replace(/{% Component %}/g, componentName);
 
   fs.writeFileSync(`${componentPath}/${fileName[1]}`, result);
-
 });
 console.log(`\x1b[32mSuccess!\x1b[0m Your new component folder is located at \x1b[36m${componentPath}\x1b[0m.`);
 console.log('Visit the contribution guide that Victor definitely made for further steps on creating your component.');

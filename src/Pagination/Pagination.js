@@ -1,42 +1,68 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Pagination.module.scss';
 
-export const Pagination = forwardRef(({ currentPage = 1, maxVisible = 5, onChange, pageCount, routePrefix, ...props }, ref) => {
+const buildPagesArray = (page, pageCount, maxVisible) => {
   const pages = [1];
-  for (let i = currentPage === 1 ? 2 : currentPage; i < currentPage + maxVisible - 1; i++) {
+  const maxMiddlePages = maxVisible - 3;
+  const leftPages = Math.floor(maxMiddlePages / 2);
+  const startingMiddlePage = page - leftPages > 1 ? page - leftPages : 2;
+  const rightpages = Math.round(maxMiddlePages / 2);
+  if (startingMiddlePage > 2) {
+    pages.push('...');
+  }
+  for (let i = startingMiddlePage; i < page + 1; i++) {
     pages.push(i);
   }
-  const handleOnClick = (e, button) => {
-    onChange(e, button);
+  for (let i = page + 1; i <= page + rightpages; i++) {
+    if (i > pageCount) break;
+    pages.push(i);
+  }
+  if (page + rightpages < pageCount - 1) {
+    pages.push('...');
+    pages.push(pageCount);
+  }
+  return pages;
+};
+
+export const Pagination = forwardRef(({ currentPage = 5, maxVisible = 5, onChange, pageCount, routePrefix, ...props }, ref) => {
+  const [page, setPage] = useState(currentPage);
+  const BasePageChangeComponent = routePrefix ? 'a' : 'button';
+
+  const handleOnClick = (e) => {
+    console.log(e);
+    setPage(e);
+    onChange(e);
   };
   return (
     <nav className={styles.styledPagination} ref={ref} {...props}>
       <ul>
-        {currentPage > 1 && (
+        {page > 1 && (
           <li>
-            <a href={`${routePrefix}-${pageCount}`} onClick={handleOnClick('previous')}>
+            <BasePageChangeComponent href={routePrefix && `${routePrefix}-${pageCount}`} onClick={() => handleOnClick(page - 1)}>
               {'<-- Previous'}
-            </a>
+            </BasePageChangeComponent>
           </li>
         )}
-        {pages.map((page) => (
-          <li key={`page-${page}`}>
-            <a href={pageCount !== 0 ? `${routePrefix}-${page}` : routePrefix} onClick={handleOnClick('next')}>
-              {page}
-            </a>
-          </li>
-        ))}
-        <li>...</li>
-        <li key={`page-${pageCount}`}>
-          <a href={`${routePrefix}-${pageCount}`}>{pageCount}</a>
-        </li>
-        {currentPage < pageCount && (
+        {buildPagesArray(page, pageCount, maxVisible).map((pageNumber) => {
+          if (pageNumber === '...') return <li>...</li>;
+          return (
+            <li key={`page-${pageNumber}`}>
+              <BasePageChangeComponent
+                className={page === pageNumber && styles.selectedPage}
+                href={pageCount !== 0 && routePrefix ? `${routePrefix}-${pageNumber}` : routePrefix}
+                onClick={() => handleOnClick(pageNumber)}>
+                {pageNumber}
+              </BasePageChangeComponent>
+            </li>
+          );
+        })}
+        {page < pageCount && (
           <li>
-            <a href={pageCount !== 0 ? `${routePrefix}-${pageCount}` : routePrefix} onClick={handleOnClick('next')}>
+            <BasePageChangeComponent href={pageCount !== 0 && routePrefix ? `${routePrefix}-${pageCount}` : routePrefix} onClick={() => handleOnClick(page + 1)}>
               {'Next -->'}
-            </a>
+            </BasePageChangeComponent>
           </li>
         )}
       </ul>
