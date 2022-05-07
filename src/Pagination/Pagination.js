@@ -48,7 +48,7 @@ export const Pagination = forwardRef(({ className, currentPage = 5, maxVisible =
         {buildPagesArray(page, pageCount, maxVisible).map((pageNumber) => (
           <li key={`page-${pageNumber}`}>
             <BasePageChangeComponent
-              className={page === pageNumber && styles.selectedPage}
+              className={page === pageNumber ? styles.selectedPage : ''}
               href={pageCount !== 0 && routePrefix ? `${routePrefix}-${pageNumber}` : routePrefix}
               onClick={() => handleOnClick(pageNumber)}>
               {pageNumber}

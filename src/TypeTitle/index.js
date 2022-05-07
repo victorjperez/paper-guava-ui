@@ -1,0 +1,1 @@
+export { TypeTitle } from './TypeTitle';
