@@ -18,7 +18,7 @@ export const MainStory = (args) => {
   return <Pagination {...args} />;
 };
 MainStory.args = {
-  pageCount: 20,
-  maxVisible: 5,
-  currentPage: 10,
+  pageCount: 10,
+  maxVisible: 3,
+  currentPage: 5,
 };
