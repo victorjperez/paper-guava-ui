@@ -1,17 +1,21 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
+import classNames from 'classnames';
+
 import styles from "./{% Component %}.module.scss"; 
 
-export const {% Component %} = forwardRef (({...props}, ref) => {
+export const {% Component %} = forwardRef (({className, ...props}, ref) => {
   return (
-    <div className={styles.styled{% Component %}} ref={ref} {...props}>
-    // Component code here
+    <div className={classNames(styles.styled{% Component %}, className)} ref={ref} {...props}>
+    {/* // Component code here */}
     </div>
   );
 });
 
 {% Component %}.propTypes = {
+  /** Additional className to supply to component */
+  className: PropTypes.string,
   /** Prop info here */
   prop: PropTypes.any,
 };
