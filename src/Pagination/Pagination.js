@@ -1,6 +1,8 @@
 import React, { forwardRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
+import classNames from 'classnames';
+
 import styles from './Pagination.module.scss';
 
 const buildPagesArray = (page, pageCount, maxVisible) => {
@@ -22,7 +24,7 @@ const buildPagesArray = (page, pageCount, maxVisible) => {
   return pages;
 };
 
-export const Pagination = forwardRef(({ currentPage = 5, maxVisible = 5, onChange, pageCount, routePrefix, ...props }, ref) => {
+export const Pagination = forwardRef(({ className, currentPage = 5, maxVisible = 5, onChange, pageCount, routePrefix, ...props }, ref) => {
   const [page, setPage] = useState(currentPage);
   const BasePageChangeComponent = routePrefix ? 'a' : 'button';
 
@@ -31,7 +33,7 @@ export const Pagination = forwardRef(({ currentPage = 5, maxVisible = 5, onChang
     onChange(e);
   };
   return (
-    <nav className={styles.styledPagination} ref={ref} {...props}>
+    <nav className={classNames(styles.styledPagination, className)} ref={ref} {...props}>
       <ul>
         {page > 1 && (
           <>
@@ -69,6 +71,8 @@ export const Pagination = forwardRef(({ currentPage = 5, maxVisible = 5, onChang
 });
 
 Pagination.propTypes = {
+  /** Additional className to supply to component */
+  className: PropTypes.string,
   /** Page that is selected as active  */
   currentPage: PropTypes.number,
   /** Callback: called when page button clicked, including next and previous */

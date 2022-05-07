@@ -1,10 +1,13 @@
 import React, { forwardRef } from 'react';
+import PropTypes from 'prop-types';
+
+import classNames from 'classnames';
 
 import styles from './StorybookDocsFooter.module.scss';
 
-export const StorybookDocsFooter = forwardRef(({ ...props }, ref) => {
+export const StorybookDocsFooter = forwardRef(({ className, ...props }, ref) => {
   return (
-    <div className={styles.styledStorybookDocsFooter} ref={ref} {...props}>
+    <div className={classNames(styles.styledStorybookDocsFooter, className)} ref={ref} {...props}>
       <div className="footer-column">
         <h2>Paper Guava UI Links</h2>
         <ul>
@@ -56,4 +59,6 @@ export const StorybookDocsFooter = forwardRef(({ ...props }, ref) => {
 StorybookDocsFooter.propTypes = {
   /** Prop info here */
   // prop: PropTypes.any,
+  /** Additional className to supply to component */
+  className: PropTypes.string,
 };

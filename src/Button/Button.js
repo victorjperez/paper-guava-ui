@@ -1,15 +1,16 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+
 import classNames from 'classnames';
 
 import styles from './Button.module.scss';
 
-export const Button = forwardRef(({ accentColor = 'gray', href, label, onClick = () => {}, styleType = 'default', ...props }, ref) => {
+export const Button = forwardRef(({ accentColor = 'gray', className, href, label, onClick = () => {}, styleType = 'default', ...props }, ref) => {
   const BaseComponent = href ? 'a' : 'button';
 
   return (
     <BaseComponent
-      className={classNames(styles.styledButton, styles[styleType])}
+      className={classNames(styles.styledButton, styles[styleType], className)}
       style={{
         '--accent-color': accentColor,
       }}
@@ -25,6 +26,8 @@ export const Button = forwardRef(({ accentColor = 'gray', href, label, onClick =
 Button.propTypes = {
   /** Color used as accent */
   accentColor: PropTypes.string,
+  /** Additional className to supply to component */
+  className: PropTypes.string,
   /** Button link, renders button as anchor */
   href: PropTypes.string,
   /** Button label */
