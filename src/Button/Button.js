@@ -25,6 +25,7 @@ export const Button = forwardRef(({ accentColor = 'gray', href, label, onClick =
 Button.propTypes = {
   /** Color used as accent */
   accentColor: PropTypes.string,
+  /** Button link, renders button as anchor */
   href: PropTypes.string,
   /** Button label */
   label: PropTypes.string.isRequired,
