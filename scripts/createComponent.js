@@ -31,6 +31,7 @@ fileNames.forEach((fileName) => {
   readData = fs.readFileSync(`${scriptFilesPath}/${fileName[0]}`);
 
   let result = readData.toString().replace(/{% Component %}/g, componentName);
+  result = result.toString().replace(/{% component %}/g, componentName.toLowerCase());
 
   fs.writeFileSync(`${componentPath}/${fileName[1]}`, result);
 });

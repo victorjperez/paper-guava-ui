@@ -8,7 +8,7 @@ import { {% Component %} } from './{% Component %}';
 `{% Component %}` description here. This should be brief and give an accurate overview of this component's functionality.
 
 <Canvas>
-    <Story id="core-ui-{% Component %}--main-story"/>
+    <Story id="core-ui-{% component %}--main-story"/>
 </Canvas>
 
 
